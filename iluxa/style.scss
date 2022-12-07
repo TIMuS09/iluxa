@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap');
+@import '_null';
+
+// Переменные
+$w5: 500;
+$w6: 600;
+$w7: 700;
+$fz20: 20px;
+$grn: #01996D;
+// ----------------
+
+// Миксины 
+@mixin dplay($df) {
+    display: $df;
+}
+@mixin jsb($sb) {
+    justify-content: $sb;
+}
+@mixin button {
+    @include dplay(inline-block);
+    background-color: $grn;
+    padding: 20px 50px;
+    border-radius: 5px;
+    border: 1px solid $grn;
+    font-size: $fz20;
+}
+@mixin ff($georg){
+    font-family: $georg;
+}
+// ----------------
+
+
+html,
+body {
+    height: 100%;
+}
+
+body{
+    font-family: 'Lato';
+}
+
+.wrapper {
+    min-height: 100%;
+    @include dplay(flex);
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container {
+    width: 1413px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.button-main {
+    padding: 13px 50px;
+    background-color: black;
+    border-radius: 5px;
+    font-weight: $w5;
+    font-size: 25px;
+    border: 1px solid yellow;
+        a {
+            color: yellow;
+        }
+        a:hover {
+            color: red;
+        }
+}
+
+.header {
+    background-color: yellow;
+    padding: 20px 0 20px 0;
+    &__inner {
+        @include dplay(flex);
+        @include jsb(space-between);
+        align-items: center;
+    }
+    &__logo {
+        img {
+            height: 90px;
+        }
+    }
+    &__menu {
+        @include dplay(flex);
+        align-items: center;
+        &-list {
+            @include dplay(flex);
+            &-item {
+                margin-right: 72px;
+                font-weight: $w5;
+                font-size: 25px;
+                a {
+                    color: #292929;
+                }
+                a:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+    &__login {
+        @include dplay(flex);
+        align-items: center;
+        font-size: 25px;
+        div:first-child {
+            margin-right: 32px;
+            font-weight: $w5;
+            font-size: 25px;
+            color: #292929;
+            a {
+                color: #292929;
+            }
+            a:hover {
+                color: red;
+            }
+        }
+    }
+
+}
+
+.main__top {
+    background-image: url('img/001.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 120vh;
+    margin-bottom: 169px;
+    &-title {
+        @include dplay(inline-block);
+        margin-top: 350px;
+        @include ff(Georgia);
+        font-weight: $w7;
+        font-size: 65px;
+        line-height: 74px;
+        color: yellow;
+        margin-bottom: 90px;
+    }
+    &-text {
+        font-size: 25px;
+        line-height: 31px;
+        margin-bottom: 55px;
+        color: #fff;
+        width: 1100px;
+    }
+    .button-main {
+        display: inline-block;
+        padding: 20px 50px;
+        background: #000;
+        border: 1px solid yellow;
+        a {
+            color: yellow;
+        }
+        a:hover {
+            color: red;
+        }
+    }
+}
+
+.main__body {
+    &-inner {
+        margin-bottom: 51px;
+    }
+    &-tt {
+        @include dplay(flex);
+        @include jsb(space-between);
+        margin-bottom: 187px;
+    }
+    &-works {
+        font-weight: $w6;
+        font-size: 24px;
+        line-height: 157%;
+    }
+    &-title {
+        @include ff(Georgia);
+        font-style: normal;
+        font-weight: $w7;
+        font-size: 50px;
+        line-height: 157%;
+        color: red;
+    }
+    &-text {
+        font-style: normal;
+        font-weight: $w5;
+        font-size: $fz20;
+        line-height: 150%;
+        color: #424242;
+        width: 600px;
+    }
+    &-block {
+        @include dplay(flex);
+        @include jsb(space-between);
+
+    }
+    &-block1, &-block2, &-block3 {
+        &-text {
+            font-weight: $w5;
+            font-size: $fz20;
+            line-height: 150%;
+            width: 400px;
+        }
+        &-title {
+            @include ff(Georgia);
+            font-weight: $w7;
+            font-size: 30px;
+        }
+    }
+    &-block1 {
+        position: relative;
+        &-num {
+            position: absolute;
+            top: -60px;
+        }
+        &-title {
+            margin-left: 78px;
+            margin-bottom: 55px;
+        }
+        &-text {
+            margin-bottom: 60px;
+        }
+        &-picture {
+            img {
+                height: 500px;
+                width: 400px;
+                border-radius: 2%;
+            }
+        }
+    }
+    &-block2 {
+        margin-top: 220px;
+        position: relative;
+        &-num {
+            position: absolute;            
+        }
+        &-title {
+            margin-top: 59px;
+            margin-left: 72px;
+            margin-bottom: 55px;
+        }
+        &-text {
+            margin-bottom: 37px;
+        }
+        &-picture {
+            img {
+                height: 500px;
+                width: 400px;
+                border-radius: 2%;
+            }
+        }
+    }
+    &-block3 {
+        position: relative;
+        &-num {
+            position: absolute;
+            left: 13px;
+        }
+        &-num {
+            position: absolute;            
+        }
+        &-title {
+            margin-top: 58px;
+            margin-left: 130px;
+            margin-bottom: 46px;
+        }
+        &-text {
+            margin-bottom: 50px;
+        }
+        &-picture {
+            img {
+                border-radius: 3%;
+                height: 500px;
+                width: 400px;
+            }
+        }
+    }
+}
+.main__lower {
+    background-color: black;
+    .container {
+        width: 1500px;
+    }
+    &-inner {
+        @include dplay(flex);
+        align-items: center;
+        padding: 229px 0px 177px 0px;
+    }
+    &-block {
+        &-title {
+            @include ff(Georgia);
+            font-weight: $w7;
+            font-size: 60px;
+            line-height: 157%;
+            color: #fff;
+            margin-bottom: 33px;
+        }
+        &-text {
+            font-weight: $w6;
+            font-size: 25px;
+            color: #fff;
+            white-space: nowrap;
+            margin-bottom: 57px;
+        }
+        &-button {
+            @include button;
+            border: 1px solid yellow;
+            background-color: black;
+        a {
+            color: yellow;
+        }
+        a:hover {
+            color: red;
+        }
+        }
+    }
+    &-item {
+        margin-left: 61px;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 900px;
+        height: 500px;
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.main__bottom {
+    &-inner {
+        margin-top: 120px;
+    }
+    &-block {
+        @include dplay(flex);
+        @include jsb(space-between);
+        position: relative;
+        margin-bottom: 200px;
+        &-img {
+            margin-left: 58px;
+        }
+        &-card {
+            position: absolute;
+            left: 0;
+            top: 382px;
+            text-align: center;
+            width: 296px;
+            box-shadow: 0px 0px white, -0.01em 0 .9em .1em black;
+            border-radius: 5px;
+            background-color: #fff;
+            
+            &-title {
+                font-weight: $w6;
+                font-size: 14.5px;
+                margin-top: 23px;
+            }
+            &-title:after {
+                content: "";
+                height: 1px;
+                width: 110px;
+                @include dplay(block);
+                background-color: #000;
+                margin: 10px auto;
+            }
+            &-face {
+                margin-bottom: 10px;
+            }
+            &-name {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+            &-user {
+                @include ff(Georgia);
+                font-weight: $w7;
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+            &-content {
+                font-size: 11px;
+                li:before {
+                    content: '';
+                    @include dplay(inline-block);
+                    padding: 2px;
+                    background: #000;
+                    border-radius: 50%;
+                    margin-right: 4px;
+                    margin-bottom: 1.7px;
+                }
+                li:first-child {
+                    margin-bottom: 16px;
+                    margin-right: 68px;
+                }
+                li:last-child {
+                    margin-bottom: 30px;
+                    margin-right: 84px;
+                }
+            }
+        }
+        &-info {
+            &-product {
+                font-weight: $w6;
+                font-size: 25px;
+                color: #424242;
+            }
+            &-title {
+                @include ff(Georgia);
+                font-weight: $w7;
+                font-size: 50px;
+                line-height: 157%;
+                color: red;
+                margin-bottom: 20px;
+            }
+            &-text {
+                font-size: 25px;
+                line-height: 31px;
+                color: #484848;
+                margin-bottom: 40px;
+                width: 500px;
+            }
+            &-button {
+                @include button;
+                border: 2px solid black;
+                background-color: red;
+                font-size: 25px;
+        a {
+            color: black;
+        }
+        a:hover {
+            color: white;
+        }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: black;
+    &-common {
+        margin-right: 15px;
+        margin-bottom: 25px;
+        min-width: 200px;
+    }
+    &__inner {
+        padding: 89px 93px 61px 93px;
+        color: white;
+    }
+    &__menu {
+        display: flex;
+        font-size: 18px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            margin-bottom: 10px;
+        }
+        li:last-child {
+            margin-bottom: 0px;
+        }
+        &-list {
+            letter-spacing: 0.02em;
+        }
+        &-list2 {
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+        &-list3 {
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+        &-list4 {
+            letter-spacing: 0.02em;
+        }
+        &-list5 {
+            letter-spacing: 0.02em;
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 24px;
+            white-space: nowrap;
+        }
+    }
+    &__copyrite {
+        display: flex;
+        margin-top: 61px;
+        font-size: 18px;
+        justify-content: space-between;
+    }
+}
